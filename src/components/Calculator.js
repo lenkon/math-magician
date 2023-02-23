@@ -1,31 +1,32 @@
-import React from 'react';
 import Total from './Total';
-import Button from './Button';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const buttons = [
-      'AC', '+/-', '%', '÷',
-      '7', '8', '9', 'x',
-      '4', '5', '6', '-',
-      '1', '2', '3', '+',
-      '0', '.', '=',
-    ];
-
-    return (
-      <div className="calculator-container">
-        <Total />
-        <div className="calc-buttons">
-          {buttons.map((keyText) => <Button key={keyText.toString()} keyText={keyText} />)}
-        </div>
+function Calculator() {
+  return (
+    <div className="calculator-container">
+      <Total />
+      <div className="calc-buttons-container">
+        <span className="calc-button">AC</span>
+        <span className="calc-button">+/-</span>
+        <span className="calc-button">%</span>
+        <span className="calc-button">÷</span>
+        <span className="calc-button">7</span>
+        <span className="calc-button">8</span>
+        <span className="calc-button">9</span>
+        <span className="calc-button">x</span>
+        <span className="calc-button">4</span>
+        <span className="calc-button">5</span>
+        <span className="calc-button">6</span>
+        <span className="calc-button">-</span>
+        <span className="calc-button">1</span>
+        <span className="calc-button">2</span>
+        <span className="calc-button">3</span>
+        <span className="calc-button">+</span>
+        <span className="calc-button">0</span>
+        <span className="calc-button">.</span>
+        <span className="calc-button">=</span>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Calculator;

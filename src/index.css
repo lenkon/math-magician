@@ -30,7 +30,7 @@ body {
   flex-direction: column;
 }
 
-.calc-buttons {
+.calc-buttons-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -52,12 +52,12 @@ body {
   background-color: var(--bg-btn);
 }
 
-.calc-buttons span:nth-of-type(4n),
-.calc-buttons span:last-child {
+.calc-buttons-container span:nth-of-type(4n),
+.calc-buttons-container span:last-child {
   border-left: none;
   background-color: var(--bg-orange);
 }
 
-.calc-buttons span:nth-child(17) {
+.calc-buttons-container span:nth-child(17) {
   flex-grow: 2;
 }
