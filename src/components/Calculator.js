@@ -1,29 +1,40 @@
-import Total from './Total';
+import { useState } from 'react';
+import calculate from '../logic/calculate';
 
 function Calculator() {
+  const [dataCalc, calcHelper] = useState({
+    total: '',
+    next: '',
+    operation: '',
+  });
+
+  const inputCalc = (event) => {
+    calcHelper(calculate(dataCalc, event.target.textContent));
+  };
+
   return (
     <div className="calculator-container">
-      <Total />
+      <input className="calc-total" type="text" value={dataCalc.next || dataCalc.total || '0'} />
       <div className="calc-buttons-container">
-        <span className="calc-button">AC</span>
-        <span className="calc-button">+/-</span>
-        <span className="calc-button">%</span>
-        <span className="calc-button">÷</span>
-        <span className="calc-button">7</span>
-        <span className="calc-button">8</span>
-        <span className="calc-button">9</span>
-        <span className="calc-button">x</span>
-        <span className="calc-button">4</span>
-        <span className="calc-button">5</span>
-        <span className="calc-button">6</span>
-        <span className="calc-button">-</span>
-        <span className="calc-button">1</span>
-        <span className="calc-button">2</span>
-        <span className="calc-button">3</span>
-        <span className="calc-button">+</span>
-        <span className="calc-button">0</span>
-        <span className="calc-button">.</span>
-        <span className="calc-button">=</span>
+        <button type="button" className="calc-button" onClick={inputCalc}>AC</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>+/-</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>%</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>÷</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>7</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>8</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>9</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>x</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>4</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>5</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>6</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>-</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>1</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>2</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>3</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>+</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>0</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>.</button>
+        <button type="button" className="calc-button" onClick={inputCalc}>=</button>
       </div>
     </div>
   );

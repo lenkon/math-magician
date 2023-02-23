@@ -41,6 +41,7 @@ body {
   justify-content: flex-end;
   background-color: var(--bg-gray);
   padding: 1.3rem 0.4rem;
+  text-align: right;
 }
 
 .calc-button {
@@ -52,12 +53,12 @@ body {
   background-color: var(--bg-btn);
 }
 
-.calc-buttons-container span:nth-of-type(4n),
-.calc-buttons-container span:last-child {
+.calc-buttons-container button:nth-of-type(4n),
+.calc-buttons-container button:last-child {
   border-left: none;
   background-color: var(--bg-orange);
 }
 
-.calc-buttons-container span:nth-child(17) {
+.calc-buttons-container button:nth-child(17) {
   flex-grow: 2;
 }
