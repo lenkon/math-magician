@@ -61,6 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://math-magician-v4ka.onrender.com/)
 - [Source Link](https://github.com/lenkon/math-magician)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
