@@ -5,8 +5,8 @@ class Quote extends React.Component {
     super(props);
     this.state = {
       randomQuote: {
-        text: 'Mathematics is not about numbers, equations, computations, or algorithms. It is about understanding.',
-        author: 'William Paul Thurston',
+        text: '',
+        author: '',
       },
     };
   }
@@ -27,7 +27,7 @@ class Quote extends React.Component {
       <div className="main-container quote-container">
         <p>
           {randomQuote.text}
-          &nbsp;--
+          &nbsp;—
           {randomQuote.author}
         </p>
       </div>
